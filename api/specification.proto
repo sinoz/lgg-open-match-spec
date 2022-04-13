@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "/pkg/pb";
+
+message IPAddress {
+    string value = 1;
+}
+
+message CalculationSet {
+    repeated Calculation calculations = 1;
+}
+
+message Calculation {
+    string provider = 1;
+    string location = 2;
+    int32 round_trip_time = 3;
+}
